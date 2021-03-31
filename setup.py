@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="libtrados",
-    version="1.1.0",
+    version="1.1.1",
     author="tkato",
     author_email="kato@ideainstitute.co.jp",
     description="libtrados module handles memsource.",

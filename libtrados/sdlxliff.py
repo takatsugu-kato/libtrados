@@ -3,6 +3,7 @@ This modules is to handle sdlxliff file
 """
 
 import re
+import html
 from lxml import etree
 
 class Sdlxliff():
@@ -135,7 +136,7 @@ class Sdlxliff():
     def __delete_element_tag(string):
         string = string.decode()
         string = re.sub('<mrk.*?>(.*?)</mrk>.*', r"\1", string, flags=re.DOTALL)
-        return string
+        return html.unescape(string)
 
     @staticmethod
     def __clean_element_string(string):
